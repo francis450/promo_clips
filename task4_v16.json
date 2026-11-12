@@ -1,0 +1,470 @@
+{
+  "clip": "task4_v16.mp4",
+  "version": "16.54.0",
+  "viewport": [
+    1100,
+    825
+  ],
+  "duration_s": 43.33,
+  "clicks": 41,
+  "scripted_s": 38.8,
+  "app_response_s": 1.72,
+  "events": [
+    {
+      "t": 2.0,
+      "action": "click",
+      "label": "row 1 warehouse cell",
+      "bbox": [
+        612,
+        390,
+        140,
+        43
+      ]
+    },
+    {
+      "t": 3.35,
+      "action": "click",
+      "label": "row 1 select existing value",
+      "bbox": [
+        612,
+        390,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 3.7,
+      "action": "type_start",
+      "label": "row 1 warehouse",
+      "bbox": [
+        612,
+        390,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 4.19,
+      "action": "type_end",
+      "label": "row 1 warehouse",
+      "bbox": [
+        612,
+        390,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 5.19,
+      "action": "click",
+      "label": "row 1 pick Mombasa Road Store - STL",
+      "bbox": [
+        618,
+        436,
+        238,
+        53
+      ]
+    },
+    {
+      "t": 6.54,
+      "action": "click",
+      "label": "row 2 warehouse cell",
+      "bbox": [
+        612,
+        434,
+        140,
+        43
+      ]
+    },
+    {
+      "t": 7.89,
+      "action": "click",
+      "label": "row 2 select existing value",
+      "bbox": [
+        612,
+        434,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 8.24,
+      "action": "type_start",
+      "label": "row 2 warehouse",
+      "bbox": [
+        612,
+        434,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 8.73,
+      "action": "type_end",
+      "label": "row 2 warehouse",
+      "bbox": [
+        612,
+        434,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 9.73,
+      "action": "click",
+      "label": "row 2 pick Mombasa Road Store - STL",
+      "bbox": [
+        618,
+        480,
+        238,
+        53
+      ]
+    },
+    {
+      "t": 11.08,
+      "action": "click",
+      "label": "row 3 warehouse cell",
+      "bbox": [
+        612,
+        478,
+        140,
+        43
+      ]
+    },
+    {
+      "t": 12.43,
+      "action": "click",
+      "label": "row 3 select existing value",
+      "bbox": [
+        612,
+        478,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 12.78,
+      "action": "type_start",
+      "label": "row 3 warehouse",
+      "bbox": [
+        612,
+        478,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 13.27,
+      "action": "type_end",
+      "label": "row 3 warehouse",
+      "bbox": [
+        612,
+        478,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 14.27,
+      "action": "click",
+      "label": "row 3 pick Mombasa Road Store - STL",
+      "bbox": [
+        618,
+        524,
+        238,
+        53
+      ]
+    },
+    {
+      "t": 15.62,
+      "action": "click",
+      "label": "row 4 warehouse cell",
+      "bbox": [
+        612,
+        522,
+        140,
+        43
+      ]
+    },
+    {
+      "t": 16.97,
+      "action": "click",
+      "label": "row 4 select existing value",
+      "bbox": [
+        612,
+        522,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 17.32,
+      "action": "type_start",
+      "label": "row 4 warehouse",
+      "bbox": [
+        612,
+        522,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 17.81,
+      "action": "type_end",
+      "label": "row 4 warehouse",
+      "bbox": [
+        612,
+        522,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 18.81,
+      "action": "click",
+      "label": "row 4 pick Mombasa Road Store - STL",
+      "bbox": [
+        618,
+        568,
+        238,
+        53
+      ]
+    },
+    {
+      "t": 20.16,
+      "action": "click",
+      "label": "row 5 warehouse cell",
+      "bbox": [
+        612,
+        566,
+        140,
+        43
+      ]
+    },
+    {
+      "t": 21.51,
+      "action": "click",
+      "label": "row 5 select existing value",
+      "bbox": [
+        612,
+        566,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 21.86,
+      "action": "type_start",
+      "label": "row 5 warehouse",
+      "bbox": [
+        612,
+        566,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 22.35,
+      "action": "type_end",
+      "label": "row 5 warehouse",
+      "bbox": [
+        612,
+        566,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 23.35,
+      "action": "click",
+      "label": "row 5 pick Mombasa Road Store - STL",
+      "bbox": [
+        618,
+        612,
+        238,
+        53
+      ]
+    },
+    {
+      "t": 24.7,
+      "action": "click",
+      "label": "row 6 warehouse cell",
+      "bbox": [
+        612,
+        610,
+        140,
+        43
+      ]
+    },
+    {
+      "t": 26.05,
+      "action": "click",
+      "label": "row 6 select existing value",
+      "bbox": [
+        612,
+        610,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 26.4,
+      "action": "type_start",
+      "label": "row 6 warehouse",
+      "bbox": [
+        612,
+        610,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 26.89,
+      "action": "type_end",
+      "label": "row 6 warehouse",
+      "bbox": [
+        612,
+        610,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 27.89,
+      "action": "click",
+      "label": "row 6 pick Mombasa Road Store - STL",
+      "bbox": [
+        618,
+        656,
+        238,
+        53
+      ]
+    },
+    {
+      "t": 29.24,
+      "action": "click",
+      "label": "row 7 warehouse cell",
+      "bbox": [
+        612,
+        654,
+        140,
+        43
+      ]
+    },
+    {
+      "t": 30.59,
+      "action": "click",
+      "label": "row 7 select existing value",
+      "bbox": [
+        612,
+        654,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 30.94,
+      "action": "type_start",
+      "label": "row 7 warehouse",
+      "bbox": [
+        612,
+        654,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 31.43,
+      "action": "type_end",
+      "label": "row 7 warehouse",
+      "bbox": [
+        612,
+        654,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 32.43,
+      "action": "click",
+      "label": "row 7 pick Mombasa Road Store - STL",
+      "bbox": [
+        618,
+        700,
+        238,
+        53
+      ]
+    },
+    {
+      "t": 33.78,
+      "action": "click",
+      "label": "row 8 warehouse cell",
+      "bbox": [
+        612,
+        698,
+        140,
+        43
+      ]
+    },
+    {
+      "t": 35.13,
+      "action": "click",
+      "label": "row 8 select existing value",
+      "bbox": [
+        612,
+        698,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 35.48,
+      "action": "type_start",
+      "label": "row 8 warehouse",
+      "bbox": [
+        612,
+        698,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 35.97,
+      "action": "type_end",
+      "label": "row 8 warehouse",
+      "bbox": [
+        612,
+        698,
+        139,
+        43
+      ]
+    },
+    {
+      "t": 36.97,
+      "action": "click",
+      "label": "row 8 pick Mombasa Road Store - STL",
+      "bbox": [
+        618,
+        744,
+        238,
+        53
+      ]
+    },
+    {
+      "t": 38.4,
+      "action": "click",
+      "label": "Save",
+      "bbox": [
+        1023,
+        10,
+        52,
+        28
+      ]
+    },
+    {
+      "t": 41.17,
+      "action": "navigated",
+      "label": "document saved"
+    }
+  ]
+}

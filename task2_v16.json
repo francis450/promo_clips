@@ -1,0 +1,79 @@
+{
+  "clip": "task2_v16.mp4",
+  "version": "16.54.0",
+  "viewport": [
+    1100,
+    825
+  ],
+  "duration_s": 9.43,
+  "clicks": 3,
+  "scripted_s": 8.19,
+  "app_response_s": 0.44,
+  "events": [
+    {
+      "t": 2.0,
+      "action": "click",
+      "label": "Customer filter",
+      "bbox": [
+        596,
+        62,
+        140,
+        28
+      ]
+    },
+    {
+      "t": 2.35,
+      "action": "type_start",
+      "label": "Customer filter",
+      "bbox": [
+        596,
+        62,
+        140,
+        28
+      ]
+    },
+    {
+      "t": 2.7,
+      "action": "type_end",
+      "label": "Customer filter",
+      "bbox": [
+        596,
+        62,
+        140,
+        28
+      ]
+    },
+    {
+      "t": 3.7,
+      "action": "click",
+      "label": "pick Nyali Beach Traders",
+      "bbox": [
+        602,
+        96,
+        288,
+        72
+      ]
+    },
+    {
+      "t": 4.97,
+      "action": "navigated",
+      "label": "list filtered to Nyali Beach Traders"
+    },
+    {
+      "t": 5.97,
+      "action": "click",
+      "label": "hero invoice ACC-SINV-2026-00031",
+      "bbox": [
+        303,
+        230,
+        136,
+        17
+      ]
+    },
+    {
+      "t": 7.24,
+      "action": "navigated",
+      "label": "hero Sales Invoice open"
+    }
+  ]
+}

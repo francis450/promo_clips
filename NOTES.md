@@ -14,7 +14,7 @@ separate step.
 | ERPNext | **15.94.1** (`version-15`) | **16.54.0** (`version-16`, 495380b) |
 | Apps installed | frappe + erpnext only | frappe + erpnext only |
 
-The v15 bench also hosts ~14 unrelated client sites and 20+ custom apps. The
+The v15 bench also hosts around 14 unrelated client sites and 20+ custom apps. The
 recording site was created fresh with **only frappe and erpnext installed**, so
 it is a like-for-like match with the clean v16 bench. No existing site was
 touched.
@@ -176,20 +176,44 @@ device scale factor 2). Verified at 1:1 — table text and field labels are shar
 
 ## 6. Click count and duration per task
 
-<!-- FILLED FROM THE REAL RECORDINGS - NOT YET RECORDED -->
+Taken from the delivered recordings (the per-clip JSON), not estimated.
 
-| Task | v15 clicks | v15 duration | v16 clicks | v16 duration |
-|---|---|---|---|---|
-| 1 — Home → Sales Invoice list | — | — | — | — |
-| 2 — Find hero invoice | — | — | — | — |
-| 3 — View linked Delivery Note | — | — | — | — |
-| 4 — Warehouse on 8 rows + save | — | — | — | — |
+| Task | v15 clicks | v15 duration | v16 clicks | v16 duration | Difference |
+|---|---|---|---|---|---|
+| 1 — Home desk → Sales Invoice list | **1** | **5.47 s** | **3** | **9.97 s** | v15 faster by 4.5 s |
+| 2 — Find the hero invoice | 3 | 9.43 s | 3 | 9.43 s | identical |
+| 3 — View the linked Delivery Note | 3 | 9.97 s | 3 | 9.97 s | identical |
+| 4 — Warehouse on 8 rows + save | **57** | **73.53 s** | **41** | **43.33 s** | **v16 faster by 30.2 s** |
+
+Scripted vs application time, per clip (scripted is identical by construction,
+so every difference above comes from route length, not from pacing):
+
+| Clip | scripted | app response | file size |
+|---|---|---|---|
+| task1_v15 | 4.55 s | 0.24 s | 0.37 MB |
+| task1_v16 | 8.51 s | 0.64 s | 0.57 MB |
+| task2_v15 | 8.16 s | 0.44 s | 0.56 MB |
+| task2_v16 | 8.19 s | 0.44 s | 0.51 MB |
+| task3_v15 | 8.54 s | 0.66 s | 0.59 MB |
+| task3_v16 | 8.54 s | 0.63 s | 0.53 MB |
+| task4_v15 | 69.84 s | 1.75 s | 4.69 MB |
+| task4_v16 | 38.80 s | 1.72 s | 1.80 MB |
+
+**How clicks are counted.** Every mouse-down is counted, so the triple-click
+used to select a field's existing text before typing over it counts as 3. Both
+versions use that same technique in task 4 (once per row), so the comparison
+stays like for like; the underlying user actions are 7 per row on v15 and 5 on
+v16.
+
+**Both versions respond at essentially the same speed** (0.24–1.84 s of
+measured application time per clip). The differences in tasks 1 and 4 are
+entirely about how many steps the interface requires, not how fast it runs.
 
 ## 7. Anything that looked wrong
 
 - **v15 dev server ignores the Host header.** `common_site_config.json` has
   `serve_default_site: true`, so `bench serve` routed every request to the live
-  client site `alicia.boraerp.co.ke` regardless of hostname — the first login
+  client site on the same bench regardless of hostname — the first login
   attempt hit it. `bench serve` is a bench-level command that silently drops
   `--site`. Both servers are now started via `frappe.utils.bench_helper` with an
   explicit `--site`, which binds them correctly. No data on any client site was
@@ -200,3 +224,32 @@ device scale factor 2). Verified at 1:1 — table text and field labels are shar
 - v16's right-hand form panel (Assign / Attachments / Tags / Share) is open by
   default and truncates the **Connections** tab label to "Conn…". Left as-is,
   since the brief asks for each version's default sidebar state.
+- **v15's task 4 end state cannot show the warehouse values.** The shot list
+  asks for an end state where "all 8 rows show the new warehouse". On v16 that
+  is exactly what you see. On v15 the Warehouse column is not in the items
+  grid, so the final frames show the 8 saved rows but *not* their warehouse —
+  there is no way to display it there without reconfiguring the grid. The
+  change itself is real and was verified in the database after recording: all
+  8 rows on both sites read `Mombasa Road Store - STL`. Worth knowing before
+  the edit, since a "look, it worked" beat only lands on the v16 clip.
+- **Frappe persists list filters per user**, so a filter left over from an
+  earlier run reappears as the next clip's start state. The first take of
+  task 2 was recorded with a stale "Eldoret Agrovet Centre" filter and had to
+  be redone. Saved list settings are now cleared before recording
+  (`/home/frappeuser/promo-work/clear_list_settings.py`). If anything is
+  re-recorded, clear them first or task 1 and task 2 will start filtered.
+- **Enter does not commit the intended filter value.** Typing `Nyali` and
+  pressing Enter selects whichever suggestion is highlighted, which is the
+  first alphabetically (Eldoret Agrovet Centre), not the one typed. Task 2
+  therefore clicks the "Nyali Beach Traders" option in the dropdown, which is
+  also the more natural action and keeps to clicks-and-typing only.
+- **v15's grid row chevron only renders on hover**, so the cursor is moved onto
+  the row before the chevron is clicked. This is visible in the footage and is
+  what a real user does; it is not an added step.
+- On v15 the draft invoice shows a blue "Submit this document to confirm" bar
+  above the form. It is standard page furniture for a draft, present in both
+  the start and end states, and it does not cover the items table.
+- The two task-4 clips are much longer than the rest (73.5 s and 43.9 s) because
+  the task genuinely is eight separate edits. For a 30–40 s vertical cut they
+  will need heavy trimming — the natural approach is two or three rows plus the
+  save, which preserves the per-row difference.
