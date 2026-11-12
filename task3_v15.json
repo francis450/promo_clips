@@ -1,0 +1,62 @@
+{
+  "clip": "task3_v15.mp4",
+  "version": "15.94.1",
+  "viewport": [
+    1100,
+    825
+  ],
+  "duration_s": 9.97,
+  "clicks": 3,
+  "scripted_s": 8.54,
+  "app_response_s": 0.66,
+  "events": [
+    {
+      "t": 2.0,
+      "action": "click",
+      "label": "Connections tab",
+      "bbox": [
+        708,
+        114,
+        83,
+        41
+      ]
+    },
+    {
+      "t": 3.28,
+      "action": "navigated",
+      "label": "Connections shown"
+    },
+    {
+      "t": 4.28,
+      "action": "click",
+      "label": "1 Delivery Note",
+      "bbox": [
+        504,
+        278,
+        121,
+        30
+      ]
+    },
+    {
+      "t": 5.54,
+      "action": "navigated",
+      "label": "linked Delivery Note list"
+    },
+    {
+      "t": 6.54,
+      "action": "click",
+      "label": "Delivery Note MAT-DN-2026-00001",
+      "bbox": [
+        247,
+        256,
+        147,
+        21
+      ]
+    },
+    {
+      "t": 7.81,
+      "action": "navigated",
+      "label": "Delivery Note open"
+    }
+  ]
+}

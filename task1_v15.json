@@ -1,0 +1,30 @@
+{
+  "clip": "task1_v15.mp4",
+  "version": "15.94.1",
+  "viewport": [
+    1100,
+    825
+  ],
+  "duration_s": 5.47,
+  "clicks": 1,
+  "scripted_s": 4.55,
+  "app_response_s": 0.24,
+  "events": [
+    {
+      "t": 2.0,
+      "action": "click",
+      "label": "Sales Invoice shortcut",
+      "bbox": [
+        854,
+        172,
+        200,
+        22
+      ]
+    },
+    {
+      "t": 3.29,
+      "action": "navigated",
+      "label": "Sales Invoice list"
+    }
+  ]
+}
